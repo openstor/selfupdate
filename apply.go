@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 openstor contributors
+// SPDX-FileCopyrightText: 2015-2025 MinIO, Inc.
+// SPDX-License-Identifier: Apache-2.0-or-later
+
 package selfupdate
 
 import (
@@ -6,11 +10,10 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 
-	"github.com/minio/selfupdate/internal/osext"
+	"github.com/openstor/selfupdate/internal/osext"
 )
 
 // Apply performs an update of the current executable or opts.TargetFile, with
@@ -45,7 +48,7 @@ func PrepareAndCheckBinary(update io.Reader, opts Options) error {
 		}
 	} else {
 		// no patch to apply, go on through
-		if newBytes, err = ioutil.ReadAll(update); err != nil {
+		if newBytes, err = io.ReadAll(update); err != nil {
 			return err
 		}
 	}

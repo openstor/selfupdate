@@ -1,9 +1,13 @@
+// SPDX-FileCopyrightText: 2025 openstor contributors
+// SPDX-FileCopyrightText: 2015-2025 MinIO, Inc.
+// SPDX-License-Identifier: Apache-2.0-or-later
+
 package selfupdate
 
 import (
 	"io"
 
-	"github.com/minio/selfupdate/internal/binarydist"
+	"github.com/openstor/selfupdate/internal/binarydist"
 )
 
 // Patcher defines an interface for applying binary patches to an old item to get an updated item.

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 openstor contributors
+// SPDX-FileCopyrightText: 2015-2025 MinIO, Inc.
+// SPDX-License-Identifier: Apache-2.0-or-later
+
 /*
 Package update provides functionality to implement secure, self-updating Go programs (or other single-file targets).
 
@@ -11,7 +15,7 @@ This example shows how to update a program remotely from a URL.
 		"fmt"
 		"net/http"
 
-		"github.com/minio/selfupdate"
+		"github.com/openstor/selfupdate"
 	)
 
 	func doUpdate(url string) error {
@@ -42,7 +46,7 @@ may be applied by implementing the Patcher interface.
 		"encoding/hex"
 		"io"
 
-		"github.com/minio/selfupdate"
+		"github.com/openstor/selfupdate"
 	)
 
 	func updateWithPatch(patch io.Reader) error {
@@ -75,7 +79,7 @@ specified as a hex string.
 		"encoding/hex"
 		"io"
 
-		"github.com/minio/selfupdate"
+		"github.com/openstor/selfupdate"
 	)
 
 	func updateWithChecksum(binary io.Reader, hexChecksum string) error {
@@ -112,7 +116,7 @@ with the private key and distribute the signature along with the selfupdate.
 		"encoding/hex"
 		"io"
 
-		"github.com/minio/selfupdate"
+		"github.com/openstor/selfupdate"
 	)
 
 	func verifiedUpdate(binary io.Reader, hexChecksum string) {
